@@ -15,12 +15,12 @@ $leftWidth: 220px;
 }
 
 body {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 1.2em;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	line-height: 1.2em;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 img,
@@ -42,30 +42,31 @@ h2 {
   margin: 0.7em 0;
 }
 main {
-  margin: 0 90px;
-  display: flex;
-  height: 100%;
 
-  @media screen and (min-width: $bigScreenW) {
-    margin: 0 auto;
-    max-width: 1440px;
-  }
-  @media screen and (max-width: 1280px) {
-    margin: 0 75px;
-  }
-  @media screen and (max-width: 1024px) {
-    margin: 0 35px;
-  }
+	margin: 0 90px;
+	display: flex;
+	height: 100%;
 
-  @media screen and (max-width: $mobileW) {
-    margin: 0 10px;
-    flex-direction: column;
-  }
-  @media screen and (max-width: $smallMobileW) {
-    margin: 0;
-  }
+	@media screen and (min-width: $bigScreenW) {
+		margin: 0 auto;
+		max-width: 1440px;	
+	}
+	@media screen and (max-width: 1280px) {
+		margin: 0 75px;	
+	}
+	@media screen and (max-width: 1024px){
+		margin: 0 35px;	
+	}
 
-  .content {
+	@media screen and (max-width: $mobileW) {
+		margin: 0 10px;
+		flex-direction: column;	
+	}
+	@media screen and (max-width: $smallMobileW) {
+		margin: 0;	
+	}
+
+	.content {
     @media screen and (min-width: $mobileW + 1) {
       max-width: calc(100% - #{$leftWidth});
       margin-left: $leftWidth;
@@ -107,6 +108,11 @@ main {
     }
   }
 }
+
+.circle-image {
+	border-radius: 50%;
+}
+
 #title {
   a {
     text-decoration: none;
