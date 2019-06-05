@@ -36,6 +36,7 @@ plainwhite:
   name: Joo-Kwang Park
   tagline: Developer
   date_format: "%b %-d, %Y"
+  disqus_shortname: jkpark-me
 
   social_links:
     github: kloiahack
