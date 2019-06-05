@@ -14,7 +14,7 @@ $leftWidth: 220px;
 
 body {
 	font-family: 'Raleway', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.2em;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -62,7 +62,7 @@ main {
 
 	.content {
 		@media screen and (min-width: $mobileW + 1){
-			max-width: calc(100% - $leftWidth);
+			max-width: calc(100% - #{$leftWidth});
 			margin-left: $leftWidth;
 		}
 	}
