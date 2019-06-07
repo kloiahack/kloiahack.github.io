@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "SVG, 사파리에서 흐리게 보이다"
+date:   2019-06-07 23:00:00 +0900
+categories: safari HTML CSS SVG FrontEnd
+---
+최근에 vue.js 기반으로 Front-end 작업을 진행하고 있다. RESTful API를 연동하여 서비스를 구축하는 업무를 진행하고 있는데, 일을 모두 마무리 하고 전달을 했더니 그에 대한 QA 결과로 다음과 같은 결과를 전달 받았다. 
+
+**크롬에서는 이미지가 잘 보이는데 모바일에서는 이미지가 흐리게 보입니다!**
+
+분명히 이미지는 zeplin에서 생성된 SVG 파일 포맷을 사용하였는데, 위와 같은 결과를 들어서 조금 당황했다. SVG 파일 포맷은 벡터 그래픽을 표현하고 있기 때문에 비트맵 형식과는 달리 어느 해상도에서도 매끄럽게 보이는게 장점이다. 이러한 특징을 가지고 있는 SVG 파일을 사용해서 아이콘을 표현하고 있지만 모바일에서는 흐리게 보인다는 결과를 받게 되었다. 
+
+이와 같은 문제를 파악하기 위하여 다음과 같은 환경에서 테스트를 진행 하였다. 
+
+- Desktop 환경에서의 Chrome, Safari
+- Mobile 환경에서의 Chrome, Safari 
+
+결과는 Mobile 환경에서의 Safari 에서만 SVG 그래픽이 흐릿하게 보이는 문제가 발생한다. QA 결과에 대해서 구체적으로 알아보니 iOS 에서 접속한 환경에서 문제가 재현되었다. SVG 그래픽을 출력하기 위하여 다음과 같이 img 태그를 사용하였다. 
+
+```html
+<img src="assets/images/icon/summary.svg" alt="Summary Icon">
+```
+
+분명 사파리에서 위 코드를 다르게 해석하여 SVG 파일을 출력하는 것으로 볼 수 있다. SVG의 코드를 바꾸기엔 너무나도 많은 SVG 파일이 있으므로 HTML, CSS로 해결할 수 있는 방법을 찾아보았다. 
+
+명확하게 원인을 파악하진 못했지만, [사파리가 SVG를 처리하는데 있어서 부분적으로 완벽하지 않다는 글](https://stackoverflow.com/questions/27245673/svg-image-element-not-displaying-in-safari)을 확인하였다. 이를 해결하기 위해서는 object 또는 iframe을 사용하면 된다는 결과를 얻었다. 실제로 다음과 같이 수정을 하여 테스트를 해본 결과, iOS에서 SVG 그래픽이 흐리게 나오는 문제가 깔끔하게 해결되었다. 
+
+```html
+<object type="image/svg+xml" data="assets/images/icon/summary.svg">
+    <img src="assets/images/icon/summary.svg" alt="Summary Icon">
+</object>
+```
+
+하지만, object 태그는 click 이벤트가 무시되는 문제가 있다. 본 서비스에서 사용하는 아이콘 몇 개는 클릭(터치)가 되어야 한다. 따라서, 별도의 div 태그를 추가하여 object 에서 보여주는 이미지 크기와 위치를 동일하게 만들어서 object 태그보다 높은 레이어로 배치시켰다. 그리고, 해당 div 태그에 click 이벤트를 추가하여 본 문제를 해결하였다. 
+
+본 글에서 제시하고 있는 문제와 문제를 해결하는 솔루션은 나이스하지 않지만, 문제를 해결을 하기 위한 하나의 방책이라고 보면 좋을 것 같다. 
+
+*좋은 솔루션을 찾게 된다면 해당 글은 업데이트 될 예정이다..*
