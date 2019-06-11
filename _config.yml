@@ -40,6 +40,7 @@ plainwhite:
   dark_mode: true # set to true to add dark mode toggle
   disqus_shortname: jkpark-me
   sitemap: true
+  analytics_id: "UA-141833733-1"
   social_links:
     github: kloiahack
     rss: rss
