@@ -289,6 +289,7 @@ main {
   overflow: hidden;
   transition: width 0.1s;
 }
+
 table {
   th, td {
     padding: 8px 13px;
@@ -298,4 +299,13 @@ table {
     background-color: #eee;
     font-family: Raleway;
   }
+}
+
+.utteranc-comment {
+	margin-top: 40px;
+
+	h3 {
+		font-size: 1.5em;
+		margin: 0 0 18px 0;
+	}
 }

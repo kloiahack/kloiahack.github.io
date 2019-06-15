@@ -19,6 +19,8 @@ layout: default
   <div class="post">
     {{ content }}
   </div>
+<div class="utteranc-comment">
+  <h3>Comments</h3>
   <script src="https://utteranc.es/client.js"
           repo="kloiahack/jkpark-comments"
           issue-term="title"
@@ -27,6 +29,7 @@ layout: default
           crossorigin="anonymous"
           async>
   </script>
+</div>
 {%- if site.plainwhite.disqus_shortname -%}
 <div id="disqus_thread" style="margin-top:25px"></div>
   <script>
