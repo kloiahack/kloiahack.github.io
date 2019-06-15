@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "워드프레스 플러그인, wppb로 쉽게 시작해보기"
+title:  "워드프레스 플러그인, wppb로 쉽게 개발해보기"
 date:   2019-06-15 23:06:00 +0900
 categories: wordpress plugin php
 ---
