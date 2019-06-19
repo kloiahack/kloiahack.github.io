@@ -28,6 +28,11 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+collections:
+  joggings:
+    output: true
+    permalink: /:collection/:name
+    
 # Theme Setting
 sass:
   sass_dir: _sass
