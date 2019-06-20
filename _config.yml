@@ -31,8 +31,8 @@ plugins:
 collections:
   joggings:
     output: true
-    permalink: /:collection/:name
-    
+    permalink: /joggings/:name
+
 # Theme Setting
 sass:
   sass_dir: _sass
