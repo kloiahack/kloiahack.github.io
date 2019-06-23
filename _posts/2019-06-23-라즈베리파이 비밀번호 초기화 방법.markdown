@@ -41,6 +41,6 @@ lightdm:*:17499:0:99999:7:::
 epmd:*:17499:0:99999:7:::
 ```
 
-중요한건 것은 `pi:$6$aL9tKoN4$CYpHIPALpfAbOn.vSCR6ZqeK41LZ4eYCTItmiX6gJUUjYFV7entBJdEiX7f5geL.FNZzJ1EArLeneCyaN.ahx/:17499:0:99999:7:::` 부분이다. pi 계정에 대한 패스워드는 부분은 :(colon)으로 구분되어 있는 필드에서 두 번째에 해시되어 있는 부분이다. 현재 보여주고 있는 해시된 원본 값은 `raspberry` 이다. 
+중요한건 것은 *pi:$6$aL9tKoN4$CYpHIPALpfAbOn.vSCR6ZqeK41LZ4eYCTItmiX6gJUUjYFV7entBJdEiX7f5geL.FNZzJ1EArLeneCyaN.ahx/:17499:0:99999:7:::* 부분이다. pi 계정에 대한 패스워드는 부분은 :(colon)으로 구분되어 있는 필드에서 두 번째에 해시되어 있는 부분이다. 현재 보여주고 있는 해시된 원본 값은 `raspberry` 이다. 
 
 만약, 본인의 pi 계정의 패스워드를 rapberry 로 변경하고 싶다면, 위에서 보이는 해시로 바꿔주면 된다. 
