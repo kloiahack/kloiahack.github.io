@@ -33,8 +33,13 @@ video {
 a {
   color: #000;
   transition: color 0.3s;
+  cursor: pointer;
   &:hover {
     color: $linkColor;
+  }
+
+  h2 {
+    cursor: pointer;
   }
 }
 
