@@ -5,8 +5,6 @@ date:   2020-06-04 22:53:21 +0900
 categories: springboot java
 ---
 
-# 서론
-
 Spring Boot에서는 초기화 과정에서 컴포넌트를 주입할 때, 어플리케이션에 대한 Key/Value 형태의 설정을 클래스 내 변수에 값을 넣어주는 @Value Annontation이 존재한다. 이러한 설정은 application.properties 또는 application.yml 과 같은 파일에서 다음과 같은 형식으로 관리할 수 있다.
 
 예) application.properties
