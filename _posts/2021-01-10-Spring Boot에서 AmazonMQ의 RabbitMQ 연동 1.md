@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring Boot에서 Amazon MQ의 RabbitMQ 연동 (1)"
+title:  "Spring Boot에서 Amazon MQ의 RabbitMQ 연동 (1)"
 date:   2021-01-10 23:50:55 +0900
 categories: springboot aws rabbitmq java
 ---
